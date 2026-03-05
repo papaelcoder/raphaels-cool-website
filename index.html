@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Raphael's Gadget Repair</title>
+  <style>
+    body {
+      background-color: #9fcef7;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+    }
+
+    header {
+      background-color: #2a5d84;
+      color: white;
+      padding: 20px;
+    }
+
+    .services {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 15px;
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    footer {
+      background-color: #2a5d84;
+      color: white;
+      padding: 15px;
+      margin-top: 20px;
+    }
+
+    a {
+      color: yellow;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<div id="loginBox">
+  <h2>Sign In to View Services</h2>
+  <p>Username: cool | Password: 4444</p>
+
+  <input type="text" id="username" placeholder="Username"><br><br>
+  <input type="password" id="password" placeholder="Password"><br><br>
+
+  <button onclick="login()">Sign In</button>
+
+  <p id="error" style="color:red;"></p>
+</div>
+
+<div id="website" style="display:none;">
+
+<header>
+  <h1>Raphael's Gadget Repair</h1>
+  <p><i>"We fix all sorts of tech issues!"</i></p>
+</header>
+
+<h2>Our Services</h2>
+
+<div class="services">
+
+  <div class="card">
+    <h3>Screen Replacement</h3>
+    <p>₱1500–15000 (depending on screen type)</p>
+    <img src="nrgh.jpg">
+  </div>
+
+  <div class="card">
+    <h3>Battery Change</h3>
+    <p>₱1000–5000</p>
+    <img src="iphone-battery-replacement-ifixit_1_1200x1200.webp">
+  </div>
+
+  <div class="card">
+    <h3>Factory Reset</h3>
+    <p>₱250</p>
+    <img src="qXJRJ5RvcWj89zhF4bNzc3.png">
+  </div>
+
+</div>
+
+<footer>
+  <h3>Contact Us</h3>
+  <p>Email: <a href="mailto:raphaelachilles03@gmail.com">
+  raphaelachilles03@gmail.com</a></p>
+  <p>Phone: <a href="tel:09977168418">
+  0997 716 8418</a></p>
+</footer>
+
+</div>
+
+<script>
+
+function login(){
+
+let user = document.getElementById("username").value;
+let pass = document.getElementById("password").value;
+
+if(user === "cool" && pass === "4444"){
+    document.getElementById("loginBox").style.display = "none";
+    document.getElementById("website").style.display = "block";
+}
+else{
+    document.getElementById("error").innerText = "Incorrect login";
+}
+
+}
+
+</script>
+
+</body>
+
+</body>
+</html>
